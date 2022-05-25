@@ -8,7 +8,10 @@ let exercises_count = parseInt(localStorage.getItem("exercises_count"));
 //must have outside
 let weeks_count = parseInt(localStorage.getItem("weeks_count"));
 // weeks_count=0;
-//console.log(weeks_count);
+// console.log(weeks_count);
+
+if (!exercises_count) exercises_count = 0;
+if (!weeks_count) weeks_count = 0;
 
 function Table_Auto_Display() {
   //zaladowanie cwiczen do datalist
@@ -284,12 +287,17 @@ function Drop(event) {
 //DATALIST
 
 //must be generated one time - reseter
-// data_count = 0;
-// let datalist_storage = [];
-// localStorage["datalist_storage"] = JSON.stringify(datalist_storage);
+let datalist_storage = [];
+if (!datalist_storage) {
+  datalist_storage = [];
+  localStorage["datalist_storage"] = JSON.stringify(datalist_storage);
+}
+// console.log(datalist_storage);
 
 //must have outside
-let data_count = parseInt(localStorage.getItem("data_count"));
+let data_count;
+if (!data_count) data_count = 0;
+data_count = parseInt(localStorage.getItem("data_count"));
 //console.log(data_count);
 
 function Datalist_Load() {

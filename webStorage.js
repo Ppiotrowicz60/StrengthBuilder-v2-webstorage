@@ -15,7 +15,7 @@ if (!weeks_count) weeks_count = 0;
 
 function Table_Auto_Display() {
   //zaladowanie cwiczen do datalist
-  Datalist_Load();
+  // Datalist_Load();
   //reset tabeli
   let table = document.getElementById("table");
   table.removeChild(document.getElementById("thead"));
@@ -287,7 +287,7 @@ function Drop(event) {
 //DATALIST
 
 //must be generated one time - reseter
-let datalist_storage = [];
+let datalist_storage;
 if (!datalist_storage) {
   datalist_storage = [];
   localStorage["datalist_storage"] = JSON.stringify(datalist_storage);

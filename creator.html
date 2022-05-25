@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <script src="scripts.js"></script>
+    <script src="webStorage.js"></script>
+    <title>creator</title>
+  </head>
+
+  <body id="body" onload="Table_Auto_Display()">
+    <!-- navigation bar -->
+    <nav class="navbar" id="Navbar">
+      <a href="javascript:void(0);" class="icon" onclick="Dropdown_Menu()"
+        >&#9776;</a
+      >
+      <a href="main.html">Main Page</a>
+      <a href="creator.html">Plan Creator</a>
+    </nav>
+    <!-- main body on page - easier setting for footer and header -->
+    <div class="main">
+      <!-- toolbar for plan making -->
+      <div class="toolbar">
+        <form
+          target="_self"
+          class="form"
+          id="form_weeks"
+          onsubmit="Table_Add_Column()"
+        >
+          <label for="weeks">Add weeks:</label>
+          <input
+            type="number"
+            name="weeks"
+            id="weeks"
+            min="1"
+            placeholder="1"
+          />
+          <button type="submit">Add</button>
+        </form>
+        <form
+          target="_self"
+          class="form"
+          id="form_exercise"
+          onsubmit="Table_Add_Exercise()"
+        >
+          <label for="exercise">Exercise:</label>
+          <input
+            list="exercises"
+            name="exercise"
+            id="exercise"
+            placeholder="Exercise"
+          />
+
+          <label for="tempo">Tempo:</label>
+          <input type="text" name="tempo" id="tempo" placeholder="2010" />
+
+          <label for="setsXreps">Sets X Reps:</label>
+          <input
+            type="text"
+            name="setsXreps"
+            id="setsXreps"
+            placeholder="3x10"
+          />
+
+          <label for="weight"> Weight:</label>
+          <input
+            type="text"
+            name="weight"
+            id="weight"
+            placeholder="100 kg, RIR, RPE"
+          />
+
+          <button type="submit">Add</button>
+        </form>
+        <form
+          target="_self"
+          class="form"
+          id="form_New_exercise"
+          onsubmit="Datalist_Add_New()"
+        >
+          <label for="New_exercise">Add new exercise to database:</label>
+          <input type="text" name="New_exercise" id="New_exercise" />
+
+          <button type="submit">Add</button>
+        </form>
+      </div>
+      <!-- editable table -->
+      <table id="table">
+        <thead id="thead">
+          <tr id="row0">
+            <th>
+              Exercise
+              <button type="button" class="delete_all" onclick="Delete_All()">
+                Delete All
+              </button>
+            </th>
+            <th>Tempo</th>
+            <th>Sets X Reps</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <!-- footer -->
+    <footer>by Patryk Piotrowicz</footer>
+    <datalist id="exercises">
+      <option value="Squat Lowbar"></option>
+      <option value="Squat Highbar"></option>
+      <option value="Deadlift Conventional"></option>
+      <option value="Deadlift Sumo"></option>
+      <option value="Benchpress Competition"></option>
+      <option value="Benchpress Biacromical"></option>
+    </datalist>
+  </body>
+</html>

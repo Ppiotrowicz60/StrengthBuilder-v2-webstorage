@@ -2,15 +2,13 @@
 
 //must have outside
 let exercises_count = parseInt(localStorage.getItem("exercises_count"));
+// exercises_count=0;
 // console.log(exercises_count);
 
 //must have outside
 let weeks_count = parseInt(localStorage.getItem("weeks_count"));
+// weeks_count=0;
 //console.log(weeks_count);
-
-//must have outside
-let data_count = parseInt(localStorage.getItem("data_count"));
-//console.log(data_count);
 
 function Table_Auto_Display() {
   //zaladowanie cwiczen do datalist
@@ -290,12 +288,17 @@ function Drop(event) {
 // let datalist_storage = [];
 // localStorage["datalist_storage"] = JSON.stringify(datalist_storage);
 
+//must have outside
+let data_count = parseInt(localStorage.getItem("data_count"));
+//console.log(data_count);
+
 function Datalist_Load() {
   //load all elements from local storage to datalist
   let datalist = document.getElementById("exercises");
   let datalist_storage = JSON.parse(localStorage["datalist_storage"]);
   for (let i = 0; i < data_count; i++) {
     if (datalist_storage[i]) {
+      //elements in datalist from local storage
       let option = document.createElement("option");
       option.setAttribute("value", datalist_storage[i]);
       datalist.appendChild(option);

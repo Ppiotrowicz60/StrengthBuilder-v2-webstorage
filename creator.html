@@ -81,28 +81,29 @@
           onsubmit="Datalist_Add_New()"
         >
           <label for="New_exercise">Add new exercise to database:</label>
-          <input type="text" name="New_exercise" id="New_exercise" />
-
+          <input type="text" name="New_exercise" id="New_exercise" required />
           <button type="submit">Add</button>
         </form>
       </div>
       <!-- editable table -->
-      <table id="table">
-        <thead id="thead">
-          <tr id="row0">
-            <th>
-              Exercise
-              <button type="button" class="delete_all" onclick="Delete_All()">
-                Delete All
-              </button>
-            </th>
-            <th>Tempo</th>
-            <th>Sets X Reps</th>
-            <th>Weight</th>
-          </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-      </table>
+      <div class="responsive-table">
+        <table id="table">
+          <thead id="thead">
+            <tr id="row0">
+              <th>
+                Exercise
+                <button type="button" class="delete_all" onclick="Delete_All()">
+                  Delete All
+                </button>
+              </th>
+              <th>Tempo</th>
+              <th>Sets X Reps</th>
+              <th>Weight</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
     </main>
 
     <!-- footer -->

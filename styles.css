@@ -13,6 +13,7 @@ body {
 .main {
   display: flex;
   flex-flow: column;
+  align-items: center;
   flex: 1;
 }
 .navbar {
@@ -40,6 +41,7 @@ body {
   float: left;
   display: flex;
   align-items: stretch;
+  width: 90vw;
   margin: 10px;
   background-color: white;
 }
@@ -71,10 +73,15 @@ body {
   vertical-align: middle;
   border: 1px solid white;
 }
-
+.responsive-table {
+  width: fit-content;
+  max-width: 90vw;
+  margin: 20px;
+  overflow-x: scroll;
+}
 table {
   background-color: white;
-  margin: 20px;
+  margin: 0;
 }
 th,
 td {
@@ -114,7 +121,7 @@ footer {
   border-radius: 5px;
   font-size: 9px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .navbar a {
     display: none;
   }
@@ -159,12 +166,5 @@ footer {
   .form {
     flex-flow: column;
     align-items: stretch;
-  }
-  table {
-    display: block;
-    align-self: center;
-    width: 1vw-40px;
-    width: fit-content;
-    overflow-x: scroll;
   }
 }

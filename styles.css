@@ -77,7 +77,7 @@ body {
   width: fit-content;
   max-width: 90vw;
   margin: 20px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 table {
   background-color: white;

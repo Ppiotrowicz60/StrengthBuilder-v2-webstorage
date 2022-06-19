@@ -10,3 +10,6 @@ Functionality:
 2. Form - adding weeks, exercises to table and exercises do database;
 3. Local Storage (web storage) - saving modified table in local storage - available change to database by modifying data structure;
 4. Responsiveness - changes view between desktop and mobile version.
+5. Video - main page quick tutorial how to use
+
+GitHub - https://github.com/Ppiotrowicz60/StrengthBuilder-v2-webstorage.git

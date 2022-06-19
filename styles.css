@@ -89,6 +89,8 @@ td {
 }
 th {
   background-color: indianred;
+  /* color: aliceblue;
+  border-color: black; */
 }
 .delete_tab {
   background-color: red;
@@ -120,6 +122,19 @@ footer {
   box-sizing: border-box;
   border-radius: 5px;
   font-size: 9px;
+}
+.video {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  margin: 10%;
+}
+.video h1 {
+  color: aliceblue;
+}
+.video video {
+  width: 60%;
 }
 @media (max-width: 768px) {
   .navbar a {

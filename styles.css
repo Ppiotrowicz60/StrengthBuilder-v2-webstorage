@@ -127,15 +127,19 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 100%;
+  width: 60%;
   margin: 10%;
+  border-radius: 7px;
+  background-image: linear-gradient(to top left, #060606, #181818);
+  box-shadow: 5px 5px 7px 7px black;
+  padding-bottom: 1rem;
 }
 .video h1 {
   color: aliceblue;
   text-align: center;
 }
 .video video {
-  width: 60%;
+  width: 80%;
 }
 @media (max-width: 768px) {
   .navbar a {
@@ -182,6 +186,9 @@ footer {
   .form {
     flex-flow: column;
     align-items: stretch;
+  }
+  .video {
+    width: 100%;
   }
   .video video {
     width: 90%;

@@ -132,6 +132,7 @@ footer {
 }
 .video h1 {
   color: aliceblue;
+  text-align: center;
 }
 .video video {
   width: 60%;
@@ -181,5 +182,8 @@ footer {
   .form {
     flex-flow: column;
     align-items: stretch;
+  }
+  .video video {
+    width: 90%;
   }
 }
